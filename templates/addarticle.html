@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h3>Makele Oluştur</h3>
+<hr>
+
+{% from "includes/formhelpers.html" import render_field %}
+<form method="post">
+    <dl>
+    {{ render_field(form.title, class="form-control shadow") }}
+    {{ render_field(form.content, class="form-control shadow") }}
+    <button type="submit" class="btn btn-secondary shadow">Makele Ekle</button>
+    </dl>
+
+</form>
+
+{% endblock body %}

@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav-tabs" id="navbarTogglerDemo01">
+        <a class="navbar-brand " href="/">US BLOG</a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav-scroll " style="--bs-scroll-height: 100px;">   
+          <li class="nav-item">
+            <a class="nav-link active shadow" aria-current="page" href="/about">HAKKIMIZDA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active shadow" aria-current="page" href="/articles">MAKALELER</a>
+          </li>
+        </ul>
+        <ul class="nav justify-content-end">
+          {% if session["logged_in"] %}
+          <li class="nav-item">
+            <a class="nav-link active shadow" aria-current="page" href="/dashboard">KONTROL PANELİ</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link active shadow" aria-current="page" href="/logout">CIKIS YAP</a>
+          </li>
+            {% else %}
+           
+            <li class="nav-item">
+            <a class="nav-link active shadow" aria-current="page" href="/login">GİRİS YAP</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link active shadow" aria-current="page" href="/register" >KAYIT OL</a>
+          </li> 
+            {% endif %}
+          </ul>
+      </div>
+    </div>
+  </nav>
